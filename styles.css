@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+header {
+    background-color: #4b7bec; /* Azul */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.folder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    max-width: 80px; /* Tamanho reduzido da pasta */
+    margin: 0 auto 20px;
+}
+
+.folder img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Adicionando transição de transformação */
+}
+
+.folder:hover img {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.video {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video:hover {
+    transform: scale(1.05);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .video-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

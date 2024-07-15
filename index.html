@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Vídeos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meus Vídeos</h1>
+    </header>
+    <main>
+        <div class="folder" id="folder">
+            <img src="folder-icon.png" alt="Pasta">
+        </div>
+        <section class="video-container hidden" id="videoContainer">
+            <div class="video">
+                <video controls>
+                    <source src="https://s19.aconvert.com/convert/p3r68-cdx67/1wr1d-3lamh.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var folder = document.getElementById('folder');
+        var videoContainer = document.getElementById('videoContainer');
+
+        folder.addEventListener('click', function(event) {
+            event.stopPropagation(); // Impede a propagação do evento para evitar efeitos indesejados
+            videoContainer.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
